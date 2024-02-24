@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:5
+    restart: always
+    ports:
+      - 27017:27017  # puente entre Computadora puerto:Contenedor puerto
+    environment:
+      MONGODB_DATABASE: nest-pokemon
+    volumes:
+      - ./mongo:/data/db  #Aqui se guarda data de la base de datos del contenedor
+
