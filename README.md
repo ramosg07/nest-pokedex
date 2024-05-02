@@ -38,3 +38,18 @@ npm run start:dev
 ## Stack usado
 * MongoDB
 * Nest
+
+# Production Build
+1. Crer el archivo ```.env.prod```
+2. Llenar las variables de entorno de prod
+3. Crear la nueva imagen
+```
+sudo docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+# Notas
+Heroku redeploy son cambios:
+```
+git commit --allow-empty -m "Tigger Heroku deploy"
+git push heroku <master|main>
+```
